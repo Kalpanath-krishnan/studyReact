@@ -7,10 +7,17 @@
     justify-content: space-between;
     border: 1px solid black;
     border-style: groove;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    
 }
 img{
     width: 100px;
     height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    
 }
 .listItems{
     display: flex;
@@ -29,15 +36,24 @@ img{
     margin: 5px;
     padding: 5px;
     width: 200px;
+    font-weight: lighter;
+    
+    
 }
 .res-card>.res-logo{
     border-radius: 5%;
+    margin: -1px;
     
     
 }
 .res-card:hover{
-    border: 1px solid black;
+    border: 1px solid blueviolet;
+    border-radius: 5%;
     cursor: pointer;
+    background-color: blue;
+    color: white;
+    box-shadow: chocolate;
+    
 
 }
 .res-logo{
@@ -47,4 +63,15 @@ img{
 .res-container{
     display: flex;
     flex-wrap: wrap;
+    margin:50px;
+    font-weight: normal;
+    justify-content:space-around;
+}
+.search-btn{
+    margin: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    
 }
