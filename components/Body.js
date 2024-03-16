@@ -1,5 +1,6 @@
 import Card from "./Card"
 import  {useState,useEffect}  from "react"
+import Shimmer from "./Shimmer"
 
 const Body=()=>
 {
@@ -11,8 +12,10 @@ const Body=()=>
     const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.670626&lng=76.55788199999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     const json= await data.json();
   setListOfRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-  
- 
+  }
+  if(listOfRestaurants.length===0)
+  {
+    return <Shimmer/> ;
   }
   return(
     <div className="body">
@@ -28,7 +31,8 @@ const Body=()=>
         </div>
         <div className="res-container">
                 {
-                    listOfRestaurants.map(restaurant=> <Card  key={restaurant.info.id} resData={restaurant}/>)
+                    listOfRestaurants.map
+                    (restaurant=> <Card  key={restaurant.info.id} resData={restaurant}/>)
                 }
               
         </div>

@@ -75,3 +75,21 @@ img{
     cursor: pointer;
     
 }
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin:50px;
+    font-weight: normal;
+    justify-content:space-around;
+}
+.shimmer-card{
+    display: block;
+
+height: 300px;
+margin-block-end: 21.28px;
+margin-block-start :21.28px;
+margin-inline-end :0px;
+margin-inline-start :0px;
+width :200px;
+    background-color: #f0f0f0;
+}
